@@ -1,16 +1,16 @@
 import Ticket from './Ticket';
 
 export default class TicketFull extends Ticket {
-	private description: string; // полное описание
+	private longDescription: string; // полное описание
 
-	constructor(id: number, name: string, status: boolean, description: string) {
-		super(id, name, status);
-		this.description = description;
+	constructor(id: number, shortDescription: string, status: boolean, longDescription: string) {
+		super(id, shortDescription, status);
+		this.longDescription = longDescription;
 	}
 
-	update(fills: { name: string, status: boolean, description: string }) {
-		this.name = fills.name;
+	update(fills: { shortDescription: string, status: boolean, longDescription: string }) {
+		this.shortDescription = fills.shortDescription;
 		this.status = fills.status;
-		this.description = fills.description;
+		this.longDescription = fills.longDescription;
 	}
 }
