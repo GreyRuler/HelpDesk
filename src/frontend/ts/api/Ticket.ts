@@ -3,7 +3,8 @@ import { Callback } from '../../../types/Callback';
 import { Data } from '../../../types/Data';
 
 export default class Ticket {
-	static URL = 'http://localhost:7070';
+	// static URL = 'http://localhost:7070';
+	static URL = 'https://helpdesk-kj5w.onrender.com';
 
 	static list(data: Data, callback: Callback) {
 		createRequest({
