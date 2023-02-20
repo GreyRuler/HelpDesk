@@ -1,0 +1,14 @@
+import AsyncForm from './AsyncForm';
+import Ticket from '../../api/Ticket';
+import { Data } from '../../../../types/Data';
+import App from '../../App';
+
+export default class EditTicketForm extends AsyncForm {
+	// eslint-disable-next-line class-methods-use-this
+	onSubmit(options: Data) {
+		Ticket.update(options, () => {
+			App.modals.editTicket.modal.hide()
+			App.page.renderTickets();
+		});
+	}
+}

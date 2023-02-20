@@ -8,9 +8,9 @@ export default class TicketFull extends Ticket {
 		this.longDescription = longDescription;
 	}
 
-	update(fills: { shortDescription: string, status: boolean, longDescription: string }) {
+	update(fills: { shortDescription: string, status: string, longDescription: string }) {
 		this.shortDescription = fills.shortDescription;
-		this.status = fills.status;
+		this.status = !!fills.status;
 		this.longDescription = fills.longDescription;
 	}
 }

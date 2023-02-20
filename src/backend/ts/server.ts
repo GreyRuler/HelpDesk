@@ -1,7 +1,8 @@
 import Koa from 'koa';
 import koaBody from 'koa-body';
 import cors from '@koa/cors';
-import TicketFull from './ts/TicketFull';
+import TicketFull from './TicketFull';
+import * as http from 'http';
 
 const app: Koa = new Koa();
 
@@ -19,7 +20,7 @@ app.use(koaBody({
 	multipart: true
 }));
 
-app.use(async (ctx: Koa.Context) => {
+app.use((ctx: Koa.Context) => {
 	const { method } = ctx.request.query;
 	switch (method) {
 		case 'allTickets':
@@ -70,4 +71,4 @@ app.use(async (ctx: Koa.Context) => {
 
 const port = 7070;
 
-app.listen(port);
+http.createServer(app.callback()).listen(port)
