@@ -1,2 +1,2 @@
-Chat
-[![CI](https://github.com/GreyRuler/Chat/actions/workflows/main.yml/badge.svg)](https://github.com/GreyRuler/Chat/actions/workflows/main.yml)
+HelpDesk
+[![CI](https://github.com/GreyRuler/HelpDesk/actions/workflows/main.yml/badge.svg)](https://github.com/GreyRuler/HelpDesk/actions/workflows/main.yml)
